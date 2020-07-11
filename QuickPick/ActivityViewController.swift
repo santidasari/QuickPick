@@ -1,5 +1,5 @@
 //
-//  FoodViewController.swift
+//  ActivityViewController.swift
 //  QuickPick
 //
 //  Created by Santi Dasari on 7/10/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FoodScreenViewController: UIViewController {
+class ActivityScreenViewController: UIViewController {
 
 
     
@@ -19,13 +19,14 @@ class FoodScreenViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //making background pink
-        view.layer.backgroundColor = UIColor(red: 1, green: 0.82, blue: 0.863, alpha: 1).cgColor
+        //making background green
+       view.layer.backgroundColor = UIColor(red: 0.816, green: 0.941, blue: 0.753, alpha: 1).cgColor
     }
     
     
     @IBAction func backButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "FoodToSecondSegue", sender: self)
+        self.performSegue(withIdentifier: "ActivityToSecondSegue", sender: self)
     }
     
 }
+

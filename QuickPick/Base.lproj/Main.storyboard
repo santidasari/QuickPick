@@ -10,7 +10,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="QuickPick" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="HomeViewController" customModule="QuickPick" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
                     </view>
                     <connections>
                         <outlet property="startButton" destination="pB9-DS-PXP" id="sm3-1V-bHW"/>
-                        <segue destination="WMh-KM-5t9" kind="showDetail" identifier="SecondViewSegue" id="Mq2-7l-MIo"/>
+                        <segue destination="WMh-KM-5t9" kind="presentation" identifier="SecondViewSegue" modalTransitionStyle="crossDissolve" id="Mq2-7l-MIo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,21 +73,103 @@
                     <view key="view" contentMode="scaleToFill" id="SsU-3f-XtP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PER-hT-nGy">
+                                <rect key="frame" x="80" y="467" width="256" height="68"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="nOb-Sf-r9J"/>
+                                    <constraint firstAttribute="width" constant="256" id="zfj-9j-ACc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Food">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="foodButtonPressed:" destination="WMh-KM-5t9" eventType="touchUpInside" id="r11-yL-PjK"/>
+                                    <segue destination="svR-dq-1wo" kind="presentation" identifier="FoodSegue" modalTransitionStyle="crossDissolve" id="YDO-G0-50J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90I-jz-9jy">
+                                <rect key="frame" x="80" y="600" width="256" height="68"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="5tK-16-VmG"/>
+                                    <constraint firstAttribute="width" constant="256" id="hlA-7M-GPU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <state key="normal" title="Activity">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="activityButtonPressed:" destination="WMh-KM-5t9" eventType="touchUpInside" id="rMq-kn-nSc"/>
+                                    <segue destination="Hbl-Hz-9wC" kind="presentation" identifier="ActivitySegue" modalTransitionStyle="crossDissolve" id="aYC-9s-kFv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select one" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oV-YA-fvY" userLabel="Select one Label">
+                                <rect key="frame" x="60" y="186" width="296" height="36"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="dPm-7e-G4G"/>
+                                    <constraint firstAttribute="height" constant="153" id="tXc-1X-LSd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YPB-Is-nep" firstAttribute="bottom" secondItem="90I-jz-9jy" secondAttribute="bottom" constant="103" id="6id-a7-wee"/>
+                            <constraint firstItem="0oV-YA-fvY" firstAttribute="top" secondItem="YPB-Is-nep" secondAttribute="top" constant="142" id="Ewu-L7-hPh"/>
+                            <constraint firstItem="PER-hT-nGy" firstAttribute="leading" secondItem="YPB-Is-nep" secondAttribute="leading" constant="80" id="JQe-Uq-CVW"/>
+                            <constraint firstItem="0oV-YA-fvY" firstAttribute="leading" secondItem="YPB-Is-nep" secondAttribute="leading" constant="60" id="MYd-Mu-VJT"/>
+                            <constraint firstItem="PER-hT-nGy" firstAttribute="top" secondItem="0oV-YA-fvY" secondAttribute="bottom" constant="245" id="Nqx-ya-bWf"/>
+                            <constraint firstItem="0oV-YA-fvY" firstAttribute="centerX" secondItem="SsU-3f-XtP" secondAttribute="centerX" id="RAr-JH-6lp"/>
+                            <constraint firstItem="90I-jz-9jy" firstAttribute="leading" secondItem="YPB-Is-nep" secondAttribute="leading" constant="80" id="Rmd-bd-fSk"/>
+                            <constraint firstItem="PER-hT-nGy" firstAttribute="top" secondItem="0oV-YA-fvY" secondAttribute="bottom" constant="245" id="Twp-FI-iBR"/>
+                            <constraint firstItem="YPB-Is-nep" firstAttribute="trailing" secondItem="PER-hT-nGy" secondAttribute="trailing" constant="80" id="f73-a6-oR8"/>
+                            <constraint firstItem="YPB-Is-nep" firstAttribute="trailing" secondItem="90I-jz-9jy" secondAttribute="trailing" constant="80" id="fbU-mN-Z8y"/>
+                            <constraint firstItem="90I-jz-9jy" firstAttribute="top" secondItem="PER-hT-nGy" secondAttribute="bottom" constant="65" id="nrP-jT-Za1"/>
+                            <constraint firstItem="90I-jz-9jy" firstAttribute="top" secondItem="PER-hT-nGy" secondAttribute="bottom" constant="65" id="usl-PP-d1d"/>
+                            <constraint firstItem="0oV-YA-fvY" firstAttribute="centerX" secondItem="SsU-3f-XtP" secondAttribute="centerX" id="uvI-YP-cwE"/>
+                            <constraint firstItem="YPB-Is-nep" firstAttribute="trailing" secondItem="0oV-YA-fvY" secondAttribute="trailing" constant="60" id="zXI-kE-1Pf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YPB-Is-nep"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LbI-ke-DUg"/>
+                    <connections>
+                        <outlet property="activityButton" destination="90I-jz-9jy" id="gnQ-ry-gyj"/>
+                        <outlet property="foodButton" destination="PER-hT-nGy" id="aI5-9L-EJf"/>
+                        <outlet property="selectLabel" destination="0oV-YA-fvY" id="Udh-lJ-U2p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGI-24-fUP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="169"/>
+            <point key="canvasLocation" x="544.92753623188412" y="168.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Food Screen View Controller-->
         <scene sceneID="xvb-Rg-FSm">
             <objects>
-                <viewController id="svR-dq-1wo" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="svR-dq-1wo" customClass="FoodScreenViewController" customModule="QuickPick" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CmU-Oc-0Q9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJ0-sK-sTI">
+                                <rect key="frame" x="35" y="79" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="svR-dq-1wo" eventType="touchUpInside" id="V9G-55-CHd"/>
+                                    <segue destination="WMh-KM-5t9" kind="presentation" identifier="FoodToSecondSegue" modalTransitionStyle="crossDissolve" id="7Gj-8C-S1Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="3ne-2S-BdH"/>
                     </view>
@@ -96,5 +178,37 @@
             </objects>
             <point key="canvasLocation" x="177" y="931"/>
         </scene>
+        <!--Activity Screen View Controller-->
+        <scene sceneID="WSX-Iv-qOD">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Hbl-Hz-9wC" customClass="ActivityScreenViewController" customModule="QuickPick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6C7-xM-ZuA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07C-m7-i67">
+                                <rect key="frame" x="34" y="67" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="&lt; Back">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="Hbl-Hz-9wC" eventType="touchUpInside" id="UH7-5n-ohc"/>
+                                    <segue destination="WMh-KM-5t9" kind="presentation" identifier="ActivityToSecondSegue" modalTransitionStyle="crossDissolve" id="2Yo-Ug-G9n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1ZQ-tA-feN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cJ-E8-TfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.072463768116" y="930.80357142857133"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Mq2-7l-MIo"/>
+    </inferredMetricsTieBreakers>
 </document>
