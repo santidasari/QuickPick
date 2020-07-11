@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondScreenViewController.swift
 //  QuickPick
 //
 //  Created by Santi Dasari on 7/10/20.
@@ -8,12 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondScreenViewController: UIViewController {
 
-    
 
-    @IBOutlet weak var startButton: UIButton!
-    
     
     
     
@@ -21,16 +18,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-         
-    //setting some characteristics for the start button like rounded edges
-        startButton.layer.cornerRadius = 25.0
+        
+        //sets up the pastel blue color background - from Figma
+         view.layer.backgroundColor = UIColor(red: 0.627, green: 0.867, blue: 0.902, alpha: 1).cgColor
     }
-    
-   
-    
-    
-
-   
     
 }
 
