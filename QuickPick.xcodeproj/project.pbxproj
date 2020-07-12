@@ -16,6 +16,7 @@
 		BBA2C8E424B9355C0043C059 /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2C8E324B9355C0043C059 /* SecondScreenViewController.swift */; };
 		BBA2C8E624B943F30043C059 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2C8E524B943F30043C059 /* FoodViewController.swift */; };
 		BBCE471924B9746B00B7C52A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE471824B9746B00B7C52A /* ActivityViewController.swift */; };
+		BBD4850724BA80A700BB5A00 /* BudgetEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4850624BA80A700BB5A00 /* BudgetEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BBA2C8E324B9355C0043C059 /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
 		BBA2C8E524B943F30043C059 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		BBCE471824B9746B00B7C52A /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		BBD4850624BA80A700BB5A00 /* BudgetEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				BBA2C8D124B914DC0043C059 /* HomeViewController.swift */,
 				BBA2C8E324B9355C0043C059 /* SecondScreenViewController.swift */,
 				BBA2C8E524B943F30043C059 /* FoodViewController.swift */,
+				BBD4850624BA80A700BB5A00 /* BudgetEnum.swift */,
 				BBCE471824B9746B00B7C52A /* ActivityViewController.swift */,
 				BBA2C8D324B914DC0043C059 /* Main.storyboard */,
 				BBA2C8D624B914DE0043C059 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD4850724BA80A700BB5A00 /* BudgetEnum.swift in Sources */,
 				BBA2C8E424B9355C0043C059 /* SecondScreenViewController.swift in Sources */,
 				BBCE471924B9746B00B7C52A /* ActivityViewController.swift in Sources */,
 				BBA2C8E624B943F30043C059 /* FoodViewController.swift in Sources */,

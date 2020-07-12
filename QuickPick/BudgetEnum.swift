@@ -7,3 +7,11 @@
 //
 
 import Foundation
+//DO NOT CHANGE ENUM AROUND
+enum Budget: Int{
+    //different budget options left to right
+    case cheap
+    case medium
+    case expensive
+    case any
+}
