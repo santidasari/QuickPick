@@ -13,7 +13,6 @@ class FoodScreenViewController: UIViewController {
 
     //array off all the budget button options
     @IBOutlet var budgetButtons: [UIButton]!
-
     @IBOutlet weak var budgetLabel: UILabel!
     @IBOutlet weak var cheapButton: UIButton!
     @IBOutlet weak var mediumButton: UIButton!
@@ -21,9 +20,10 @@ class FoodScreenViewController: UIViewController {
     @IBOutlet weak var anyButton: UIButton!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var milesLabel: UILabel!
-    
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var foodTypeLabel: UILabel!
-    
+    @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,6 @@ class FoodScreenViewController: UIViewController {
         
         //making background pink
         view.layer.backgroundColor = UIColor(red: 1, green: 0.82, blue: 0.863, alpha: 1).cgColor
-        
        //making everything have rounded corners
         budgetLabel.layer.masksToBounds = true
         budgetLabel.layer.cornerRadius = 25.0
@@ -42,12 +41,12 @@ class FoodScreenViewController: UIViewController {
         anyButton.layer.cornerRadius = 10.0
         distanceLabel.layer.masksToBounds = true
         distanceLabel.layer.cornerRadius = 25.0
-        foodTypeLabel.layer.masksToBounds = true
-        foodTypeLabel.layer.cornerRadius = 25.0
+        nextButton.layer.cornerRadius = 25.0
 
     }
     
     
+    //back button to food or activity page
     @IBAction func backButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "FoodToSecondSegue", sender: self)
     }
@@ -78,16 +77,26 @@ class FoodScreenViewController: UIViewController {
         return .any
     }
     
-    
+    //slider that is connected to label and records the users distance
+    //interconnected with stepper
     @IBAction func distanceSlider(_ sender: UISlider) {
+        stepper.value = Double(Float(sender.value))
         milesLabel.text = String(Int(sender.value))
     }
     
-    
-    @IBAction func `switch`(_ sender: UISwitch) {
-       
-        }
-        
+    //stepper that is connected to label and makes it easier for users to enter distance
+    //interconnected with slider
+    @IBAction func distanceStepper(_ sender: UIStepper) {
+        slider.value = Float(sender.value)
+        milesLabel.text = String(Int(sender.value))
     }
+    
+    //button that takes you to food view page
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "FoodTypeSegue", sender: self)
+        }
+    }
+    
+    
 
 

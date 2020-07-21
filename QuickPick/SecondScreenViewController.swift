@@ -24,7 +24,6 @@ class SecondScreenViewController: UIViewController {
         
         //sets up the pastel blue color background - from Figma
          view.layer.backgroundColor = UIColor(red: 0.627, green: 0.867, blue: 0.902, alpha: 1).cgColor
-        
         //rounding off the corners for the label
         selectLabel.layer.masksToBounds = true
         selectLabel.layer.cornerRadius = 25.0
@@ -34,19 +33,15 @@ class SecondScreenViewController: UIViewController {
     }
     
     
-    
+    //takes it to the next food view
     @IBAction func foodButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "FoodSegue", sender: self)
         
     }
     
-    
-    
-    
+    //takes it to the next activity view
     @IBAction func activityButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "ActivitySegue", sender: self)
-        
-        
     }
     
 }

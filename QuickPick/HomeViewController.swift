@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
    
     @IBAction func startButtonPressed(_ sender: Any) {
         //func that lets us go from home screen to second view
-        self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
+        self.performSegue(withIdentifier: "LocationSegue", sender: self)
         
     }
     
