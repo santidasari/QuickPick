@@ -149,46 +149,6 @@
             </objects>
             <point key="canvasLocation" x="1496" y="169"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="VAg-Yf-2oq">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="122-gs-lm2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7yS-6G-P4C">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="select food type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0o-Zm-gCI">
-                                <rect key="frame" x="52" y="110" width="311" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
-                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0iO-KR-J30">
-                                <rect key="frame" x="83" y="210" width="29" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uQa-7K-1ne">
-                                <rect key="frame" x="300" y="209" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="onTintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <connections>
-                                    <action selector="switch:" destination="svR-dq-1wo" eventType="valueChanged" id="8tr-cs-7QY"/>
-                                </connections>
-                            </switch>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="lEU-i9-Ibg"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NuN-6w-E9W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1174" y="1671"/>
-        </scene>
         <!--Food Screen View Controller-->
         <scene sceneID="xvb-Rg-FSm">
             <objects>
@@ -342,7 +302,7 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="svR-dq-1wo" eventType="touchUpInside" id="lrZ-ca-HeV"/>
-                                    <segue destination="122-gs-lm2" kind="presentation" identifier="FoodTypeSegue" id="by7-ig-sdL"/>
+                                    <segue destination="lhn-s3-DDw" kind="presentation" identifier="FoodTypeSegue" modalTransitionStyle="crossDissolve" id="JPb-PZ-iOx"/>
                                 </connections>
                             </button>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" maximumValue="65" translatesAutoresizingMaskIntoConstraints="NO" id="8ro-Eh-hQu">
@@ -423,7 +383,6 @@
                         <outlet property="cheapButton" destination="obx-ya-vRO" id="MPA-Am-AIt"/>
                         <outlet property="distanceLabel" destination="Snu-X4-RCv" id="c3x-R5-woT"/>
                         <outlet property="expensiveButton" destination="sRs-Qz-O8G" id="9w4-PO-pn5"/>
-                        <outlet property="foodTypeLabel" destination="c0o-Zm-gCI" id="vh1-qz-w26"/>
                         <outlet property="mediumButton" destination="7aA-xK-FiG" id="Tlh-ZA-wAA"/>
                         <outlet property="milesLabel" destination="NX0-tH-Avn" id="yid-W4-SsZ"/>
                         <outlet property="nextButton" destination="yPj-6i-mXh" id="kaL-k0-Jiy"/>
@@ -438,6 +397,389 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Cc-aX-Iv3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1173.913043478261" y="956.91964285714278"/>
+        </scene>
+        <!--Food Type View Controller-->
+        <scene sceneID="WSq-l9-xgn">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="lhn-s3-DDw" customClass="FoodTypeViewController" customModule="QuickPick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="km4-xc-1tt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLF-5F-kkg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-la-pHy" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select food type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3L-Ci-FxY">
+                                                <rect key="frame" x="52" y="108" width="311" height="61"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="61" id="2Ft-oS-RvR"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="ALy-jB-VJm"/>
+                                                    <constraint firstAttribute="width" constant="311" id="MxD-Ua-Who"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="V8H-X6-QB6"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="61" id="YrF-I8-Sni"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="311" id="kLQ-WX-qu1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EPa-Oh-470">
+                                                <rect key="frame" x="8" y="24" width="132" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <state key="normal" title="&lt; Back"/>
+                                                <connections>
+                                                    <action selector="backPressed:" destination="lhn-s3-DDw" eventType="touchUpInside" id="rXP-bG-3ur"/>
+                                                    <segue destination="svR-dq-1wo" kind="presentation" identifier="BackToFoodViewSegue" modalTransitionStyle="crossDissolve" id="TGN-6P-BBo"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40.5" translatesAutoresizingMaskIntoConstraints="NO" id="OR7-2G-Pgz" userLabel="Switch Stack">
+                                                <rect key="frame" x="314" y="200" width="49" height="1175"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQZ-86-Sx1" userLabel="All">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="any"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="allPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="Fxy-cu-KRj"/>
+                                                            <action selector="allSwitch:" destination="lhn-s3-DDw" eventType="valueChanged" id="SEg-WK-lTk"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-SL-wRK" userLabel="Indian">
+                                                        <rect key="frame" x="0.0" y="71.5" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Indian"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="indianSwitchPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="T7u-tX-nzH"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bH-YR-aFV" userLabel="Italian ">
+                                                        <rect key="frame" x="0.0" y="143" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Italian"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="italianPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="vob-Sv-j7e"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IyJ-df-cef" userLabel="Asian">
+                                                        <rect key="frame" x="0.0" y="214.5" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Asian"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="asianPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="mxa-8u-GXh"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNK-QM-Xh8" userLabel="Barbeque">
+                                                        <rect key="frame" x="0.0" y="286" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Barbeque"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="barbequePressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="nab-k0-vtF"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAm-jk-H5H" userLabel="Burgers">
+                                                        <rect key="frame" x="0.0" y="357.5" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Burgers"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="burgersPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="6GF-eD-bkH"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvz-0C-nDo" userLabel="Diners">
+                                                        <rect key="frame" x="0.0" y="429" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Diners"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="dinersPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="0pp-d8-oFC"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dQd-ip-xdl" userLabel="Dessert">
+                                                        <rect key="frame" x="0.0" y="500.5" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Dessert"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="dessertPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="LPL-Su-dog"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4f9-DM-Uty" userLabel="Chinese">
+                                                        <rect key="frame" x="0.0" y="572" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Chinese"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="chinesePressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="PP7-01-Mf8"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Mw-94-gc3" userLabel="Korean">
+                                                        <rect key="frame" x="0.0" y="643.5" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Korean"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="koreanPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="tsc-lq-SVz"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0h-Qu-k7Z" userLabel="Japanese">
+                                                        <rect key="frame" x="0.0" y="715" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Japanese"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="japanesePressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="eHQ-69-OT1"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hig-gE-SGA" userLabel="Hawaiian">
+                                                        <rect key="frame" x="0.0" y="786.5" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Hawaiian"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="hawaiianPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="yNl-JQ-RHL"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byy-q5-C4n" userLabel="Mexican">
+                                                        <rect key="frame" x="0.0" y="858" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Mexican"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="mexicanPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="JHs-hq-zom"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNM-ip-mhi" userLabel="Pizza">
+                                                        <rect key="frame" x="0.0" y="929.5" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Pizza"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="pizzaPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="ZLB-pe-hBe"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-mV-Nk3" userLabel="Thai">
+                                                        <rect key="frame" x="0.0" y="1001" width="51" height="31"/>
+                                                        <accessibility key="accessibilityConfiguration" label="Thai"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="thaiPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="T6D-DN-Mfs"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMl-eh-u1f" userLabel="Sushi">
+                                                        <rect key="frame" x="0.0" y="1072.5" width="51" height="31"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="sushiPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="3Z8-Lv-D0K"/>
+                                                        </connections>
+                                                    </switch>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5n-CN-38y" userLabel="Vegetarian">
+                                                        <rect key="frame" x="0.0" y="1144" width="51" height="31"/>
+                                                        <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="vegPressed:" destination="lhn-s3-DDw" eventType="valueChanged" id="G0Q-D2-OVC"/>
+                                                        </connections>
+                                                    </switch>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="49" id="PJE-LN-iNT"/>
+                                                    <constraint firstAttribute="height" constant="1175" id="d2k-WX-Y9A"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="vN8-zd-yDe" userLabel="Label Stack">
+                                                <rect key="frame" x="52" y="200" width="110.5" height="1171.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ln-wK-DL3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="856-oA-Xb3">
+                                                        <rect key="frame" x="0.0" y="71.5" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Italian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKc-9P-3bf">
+                                                        <rect key="frame" x="0.0" y="143" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1o-AM-jmy">
+                                                        <rect key="frame" x="0.0" y="214.5" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barbecue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcz-Lf-fwU">
+                                                        <rect key="frame" x="0.0" y="286" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burgers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juK-4G-Lg4">
+                                                        <rect key="frame" x="0.0" y="357.5" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ou-i7-pKs">
+                                                        <rect key="frame" x="0.0" y="429" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dessert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91N-oa-dy1">
+                                                        <rect key="frame" x="0.0" y="500.5" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chinese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7c-6M-sas">
+                                                        <rect key="frame" x="0.0" y="572" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Korean" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJc-Qm-neB">
+                                                        <rect key="frame" x="0.0" y="643.5" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Japanese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fC-uY-cHM">
+                                                        <rect key="frame" x="0.0" y="715" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hawaiian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pF-dm-YFB">
+                                                        <rect key="frame" x="0.0" y="786.5" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mexican" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5g-5U-1c8">
+                                                        <rect key="frame" x="0.0" y="858" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sB3-jw-ufZ">
+                                                        <rect key="frame" x="0.0" y="929.5" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="az9-K0-85C">
+                                                        <rect key="frame" x="0.0" y="1001" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sushi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovf-Bd-mN9">
+                                                        <rect key="frame" x="0.0" y="1072.5" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegetarian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlC-Jj-Hf7">
+                                                        <rect key="frame" x="0.0" y="1144" width="110.5" height="27.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1171.5" id="foe-Jf-n6a"/>
+                                                    <constraint firstAttribute="width" constant="110.5" id="i4y-4k-IMd"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2re-1D-JfK">
+                                                <rect key="frame" x="266" y="1471" width="137" height="61"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="137" id="g8R-eg-yN1"/>
+                                                    <constraint firstAttribute="height" constant="61" id="r0S-eh-44D"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="61" id="uBK-Zm-p2s"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="129" id="zJr-O3-CZQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                                <state key="normal" title="Next"/>
+                                                <connections>
+                                                    <action selector="nextButtonPressed:" destination="svR-dq-1wo" eventType="touchUpInside" id="SYv-P8-0Dt"/>
+                                                    <action selector="nextPressed:" destination="lhn-s3-DDw" eventType="touchUpInside" id="pgH-bw-Dwe"/>
+                                                    <segue destination="Hbl-Hz-9wC" kind="presentation" identifier="RandomSegue" id="KBj-vU-82Q"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.95653492212295532" green="0.82471412420272827" blue="0.86369776725769043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="2re-1D-JfK" secondAttribute="bottom" constant="68" id="208-uH-HjH"/>
+                                            <constraint firstItem="2re-1D-JfK" firstAttribute="leading" secondItem="lUq-la-pHy" secondAttribute="leading" constant="266" id="3F6-x8-XR3"/>
+                                            <constraint firstItem="d3L-Ci-FxY" firstAttribute="leading" secondItem="lUq-la-pHy" secondAttribute="leading" constant="52" id="3MV-Ov-IMJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="OR7-2G-Pgz" secondAttribute="trailing" constant="51" id="5qN-vF-18w"/>
+                                            <constraint firstAttribute="trailing" secondItem="d3L-Ci-FxY" secondAttribute="trailing" constant="51" id="CE5-7s-OUZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="d3L-Ci-FxY" secondAttribute="trailing" constant="51" id="De9-U9-Cki"/>
+                                            <constraint firstItem="OR7-2G-Pgz" firstAttribute="leading" secondItem="vN8-zd-yDe" secondAttribute="trailing" constant="151.5" id="ETZ-Q4-pDP"/>
+                                            <constraint firstItem="d3L-Ci-FxY" firstAttribute="leading" secondItem="lUq-la-pHy" secondAttribute="leading" constant="52" id="Erw-1z-b2g"/>
+                                            <constraint firstItem="OR7-2G-Pgz" firstAttribute="top" secondItem="d3L-Ci-FxY" secondAttribute="bottom" constant="31" id="GYR-wT-NXG"/>
+                                            <constraint firstItem="vN8-zd-yDe" firstAttribute="top" secondItem="d3L-Ci-FxY" secondAttribute="bottom" constant="31" id="Gvb-ld-dCt"/>
+                                            <constraint firstAttribute="bottom" secondItem="vN8-zd-yDe" secondAttribute="bottom" constant="228.5" id="Jgc-0i-90b"/>
+                                            <constraint firstItem="d3L-Ci-FxY" firstAttribute="top" secondItem="EPa-Oh-470" secondAttribute="bottom" constant="29" id="Nha-K9-xOx"/>
+                                            <constraint firstAttribute="trailing" secondItem="d3L-Ci-FxY" secondAttribute="trailing" constant="51" id="ODk-cK-Yn8"/>
+                                            <constraint firstAttribute="trailing" secondItem="2re-1D-JfK" secondAttribute="trailing" constant="11" id="QaX-ss-hSs"/>
+                                            <constraint firstItem="OR7-2G-Pgz" firstAttribute="top" secondItem="d3L-Ci-FxY" secondAttribute="bottom" constant="31" id="RuC-TE-tpU"/>
+                                            <constraint firstAttribute="height" constant="1600" id="UlZ-YE-wkW"/>
+                                            <constraint firstAttribute="trailing" secondItem="d3L-Ci-FxY" secondAttribute="trailing" constant="51" id="XF9-GA-Nzw"/>
+                                            <constraint firstItem="d3L-Ci-FxY" firstAttribute="leading" secondItem="lUq-la-pHy" secondAttribute="leading" constant="52" id="Z86-iO-9rq"/>
+                                            <constraint firstItem="vN8-zd-yDe" firstAttribute="leading" secondItem="lUq-la-pHy" secondAttribute="leading" constant="52" id="al3-f8-jqS"/>
+                                            <constraint firstItem="d3L-Ci-FxY" firstAttribute="leading" secondItem="lUq-la-pHy" secondAttribute="leading" constant="52" id="qw0-1q-53b"/>
+                                            <constraint firstAttribute="bottom" secondItem="OR7-2G-Pgz" secondAttribute="bottom" constant="225" id="sRa-Z1-TZn"/>
+                                            <constraint firstItem="2re-1D-JfK" firstAttribute="top" secondItem="OR7-2G-Pgz" secondAttribute="bottom" constant="96" id="xRl-Zc-qNI"/>
+                                            <constraint firstItem="d3L-Ci-FxY" firstAttribute="top" secondItem="EPa-Oh-470" secondAttribute="bottom" constant="29" id="zLz-aK-QmW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lUq-la-pHy" firstAttribute="leading" secondItem="tLF-5F-kkg" secondAttribute="leading" id="0wg-gD-sZF"/>
+                                    <constraint firstItem="lUq-la-pHy" firstAttribute="width" secondItem="tLF-5F-kkg" secondAttribute="width" id="AqA-AU-10R"/>
+                                    <constraint firstAttribute="trailing" secondItem="lUq-la-pHy" secondAttribute="trailing" id="P7u-jF-XS6"/>
+                                    <constraint firstAttribute="bottom" secondItem="lUq-la-pHy" secondAttribute="bottom" id="WQM-HV-HbL"/>
+                                    <constraint firstItem="lUq-la-pHy" firstAttribute="top" secondItem="tLF-5F-kkg" secondAttribute="top" id="ikO-Px-2Sv"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tLF-5F-kkg" firstAttribute="leading" secondItem="8Nu-d6-d5M" secondAttribute="leading" id="FsC-Yy-jrE"/>
+                            <constraint firstItem="tLF-5F-kkg" firstAttribute="trailing" secondItem="8Nu-d6-d5M" secondAttribute="trailing" id="ZKM-pJ-aiR"/>
+                            <constraint firstItem="tLF-5F-kkg" firstAttribute="top" secondItem="km4-xc-1tt" secondAttribute="top" id="eIU-lw-Kau"/>
+                            <constraint firstAttribute="bottom" secondItem="tLF-5F-kkg" secondAttribute="bottom" id="sGZ-jt-OOt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Nu-d6-d5M"/>
+                    </view>
+                    <size key="freeformSize" width="414" height="1600"/>
+                    <connections>
+                        <outlet property="allSwitch" destination="GQZ-86-Sx1" id="C6X-F5-MHm"/>
+                        <outlet property="foodTypeLabel" destination="d3L-Ci-FxY" id="9dj-kr-eyb"/>
+                        <outletCollection property="options" destination="P9i-SL-wRK" collectionClass="NSMutableArray" id="PBh-Wx-828"/>
+                        <outletCollection property="options" destination="4bH-YR-aFV" collectionClass="NSMutableArray" id="ESr-yJ-6Bi"/>
+                        <outletCollection property="options" destination="IyJ-df-cef" collectionClass="NSMutableArray" id="wnL-As-Hq6"/>
+                        <outletCollection property="options" destination="ZNK-QM-Xh8" collectionClass="NSMutableArray" id="qjn-sF-GkL"/>
+                        <outletCollection property="options" destination="RAm-jk-H5H" collectionClass="NSMutableArray" id="1jn-vy-aQm"/>
+                        <outletCollection property="options" destination="gvz-0C-nDo" collectionClass="NSMutableArray" id="T43-E4-Q5G"/>
+                        <outletCollection property="options" destination="dQd-ip-xdl" collectionClass="NSMutableArray" id="0X2-eq-MFj"/>
+                        <outletCollection property="options" destination="4f9-DM-Uty" collectionClass="NSMutableArray" id="KMy-9G-8hM"/>
+                        <outletCollection property="options" destination="1Mw-94-gc3" collectionClass="NSMutableArray" id="066-nQ-13D"/>
+                        <outletCollection property="options" destination="C0h-Qu-k7Z" collectionClass="NSMutableArray" id="wPP-uV-Pbf"/>
+                        <outletCollection property="options" destination="Hig-gE-SGA" collectionClass="NSMutableArray" id="fKC-5z-2XX"/>
+                        <outletCollection property="options" destination="byy-q5-C4n" collectionClass="NSMutableArray" id="jyd-GH-jC8"/>
+                        <outletCollection property="options" destination="aNM-ip-mhi" collectionClass="NSMutableArray" id="iVs-A8-8HN"/>
+                        <outletCollection property="options" destination="lHL-mV-Nk3" collectionClass="NSMutableArray" id="6wq-Ua-DqH"/>
+                        <outletCollection property="options" destination="RMl-eh-u1f" collectionClass="NSMutableArray" id="vaT-u6-Co0"/>
+                        <outletCollection property="options" destination="E5n-CN-38y" collectionClass="NSMutableArray" id="Rq1-f2-le9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0go-Pz-2hM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1173.913043478261" y="2025"/>
         </scene>
         <!--Activity Screen View Controller-->
         <scene sceneID="WSX-Iv-qOD">
@@ -547,6 +889,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="KBj-vU-82Q"/>
+        <segue reference="TGN-6P-BBo"/>
         <segue reference="7Gj-8C-S1Z"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>

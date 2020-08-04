@@ -45,10 +45,13 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     
     //deciding if we need to send user to settings to give us access to location or send them to next view
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        var currentLocation:CLLocation!
         if(status == CLAuthorizationStatus.denied){
             showLocationDisabledPopUp()
         }
-        if((status == CLAuthorizationStatus.authorizedWhenInUse) || (status == CLAuthorizationStatus.authorizedAlways)){
+       if((status == CLAuthorizationStatus.authorizedWhenInUse) || (status == CLAuthorizationStatus.authorizedAlways)){
+        currentLocation = locationManager.location
+        print(currentLocation.coordinate)
         self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
         }
     }
@@ -57,6 +60,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
            if let location = locations.first{
                print(location.coordinate)
+              self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
            }
        }
     
@@ -90,12 +94,14 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     func usrTextField(textField: UITextField!){
         usrTextField = textField
         usrTextField?.placeholder = "Zipcode"
+        usrTextField?.keyboardType = .asciiCapableNumberPad
     }
     
     //if user enters zipcode and presses ok they are taken to next page
+    //prints out the zipcode entered by user
     func okHandler(alert: UIAlertAction){
+        print(usrTextField?.text as Any)
         self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
-
     }
     
 }

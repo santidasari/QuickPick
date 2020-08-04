@@ -93,6 +93,7 @@ class FoodScreenViewController: UIViewController {
     
     //button that takes you to food view page
     @IBAction func nextButtonPressed(_ sender: Any) {
+        print(milesLabel.text as Any)
         self.performSegue(withIdentifier: "FoodTypeSegue", sender: self)
         }
     }
