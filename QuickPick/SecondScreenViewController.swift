@@ -43,6 +43,6 @@ class SecondScreenViewController: UIViewController {
     @IBAction func activityButtonPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "ActivitySegue", sender: self)
     }
-    
+   
 }
 

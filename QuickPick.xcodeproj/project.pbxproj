@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		104975734C698FCCA5A11481 /* Pods_QuickPick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD1473EAB625A018BA2F004 /* Pods_QuickPick.framework */; };
+		BB73336024F1ACD60010D776 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BB73335F24F1ACD60010D776 /* Podfile */; };
+		BB73336224F1B0C90010D776 /* EnivornmentEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB73336124F1B0C90010D776 /* EnivornmentEnum.swift */; };
+		BB87ED7724E9AE7100B2ED6F /* FinalButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87ED7624E9AE7100B2ED6F /* FinalButtonViewController.swift */; };
+		BB87ED7924E9B78A00B2ED6F /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB87ED7824E9B78A00B2ED6F /* ResultsViewController.swift */; };
 		BB9B504F24BBA093003E5909 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9B504E24BBA093003E5909 /* LocationViewController.swift */; };
 		BBA2C8CE24B914DC0043C059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2C8CD24B914DC0043C059 /* AppDelegate.swift */; };
 		BBA2C8D024B914DC0043C059 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA2C8CF24B914DC0043C059 /* SceneDelegate.swift */; };
@@ -22,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7593FB059B85EA2C911DE66F /* Pods-QuickPick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickPick.debug.xcconfig"; path = "Target Support Files/Pods-QuickPick/Pods-QuickPick.debug.xcconfig"; sourceTree = "<group>"; };
+		9FD1473EAB625A018BA2F004 /* Pods_QuickPick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickPick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB73335F24F1ACD60010D776 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB73336124F1B0C90010D776 /* EnivornmentEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnivornmentEnum.swift; sourceTree = "<group>"; };
+		BB87ED7624E9AE7100B2ED6F /* FinalButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalButtonViewController.swift; sourceTree = "<group>"; };
+		BB87ED7824E9B78A00B2ED6F /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		BB9B504E24BBA093003E5909 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		BBA2C8CA24B914DC0043C059 /* QuickPick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickPick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA2C8CD24B914DC0043C059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +47,7 @@
 		BBCE471824B9746B00B7C52A /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		BBD4850624BA80A700BB5A00 /* BudgetEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetEnum.swift; sourceTree = "<group>"; };
 		BBFBAAD024C40EC900841017 /* FoodTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypeViewController.swift; sourceTree = "<group>"; };
+		E676FC1F8F5916DF9C296C33 /* Pods-QuickPick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickPick.release.xcconfig"; path = "Target Support Files/Pods-QuickPick/Pods-QuickPick.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +55,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104975734C698FCCA5A11481 /* Pods_QuickPick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EF771A6C054CB65DFD8821A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FD1473EAB625A018BA2F004 /* Pods_QuickPick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A4282A4D708C406437CE67F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7593FB059B85EA2C911DE66F /* Pods-QuickPick.debug.xcconfig */,
+				E676FC1F8F5916DF9C296C33 /* Pods-QuickPick.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BBA2C8C124B914DC0043C059 = {
 			isa = PBXGroup;
 			children = (
+				BB73335F24F1ACD60010D776 /* Podfile */,
 				BBA2C8CC24B914DC0043C059 /* QuickPick */,
 				BBA2C8CB24B914DC0043C059 /* Products */,
+				5A4282A4D708C406437CE67F /* Pods */,
+				0EF771A6C054CB65DFD8821A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,7 +109,10 @@
 				BBA2C8E524B943F30043C059 /* FoodViewController.swift */,
 				BBFBAAD024C40EC900841017 /* FoodTypeViewController.swift */,
 				BBD4850624BA80A700BB5A00 /* BudgetEnum.swift */,
+				BB73336124F1B0C90010D776 /* EnivornmentEnum.swift */,
 				BBCE471824B9746B00B7C52A /* ActivityViewController.swift */,
+				BB87ED7624E9AE7100B2ED6F /* FinalButtonViewController.swift */,
+				BB87ED7824E9B78A00B2ED6F /* ResultsViewController.swift */,
 				BBA2C8D324B914DC0043C059 /* Main.storyboard */,
 				BBA2C8D624B914DE0043C059 /* Assets.xcassets */,
 				BBA2C8D824B914DE0043C059 /* LaunchScreen.storyboard */,
@@ -92,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBA2C8DE24B914DE0043C059 /* Build configuration list for PBXNativeTarget "QuickPick" */;
 			buildPhases = (
+				A7EB28E59E5E0D303977F74B /* [CP] Check Pods Manifest.lock */,
 				BBA2C8C624B914DC0043C059 /* Sources */,
 				BBA2C8C724B914DC0043C059 /* Frameworks */,
 				BBA2C8C824B914DC0043C059 /* Resources */,
+				6947150F7A9210E6828F434A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,11 +183,54 @@
 			files = (
 				BBA2C8DA24B914DE0043C059 /* LaunchScreen.storyboard in Resources */,
 				BBA2C8D724B914DE0043C059 /* Assets.xcassets in Resources */,
+				BB73336024F1ACD60010D776 /* Podfile in Resources */,
 				BBA2C8D524B914DC0043C059 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6947150F7A9210E6828F434A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickPick/Pods-QuickPick-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickPick/Pods-QuickPick-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickPick/Pods-QuickPick-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7EB28E59E5E0D303977F74B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickPick-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BBA2C8C624B914DC0043C059 /* Sources */ = {
@@ -160,11 +241,14 @@
 				BBFBAAD124C40EC900841017 /* FoodTypeViewController.swift in Sources */,
 				BBA2C8E424B9355C0043C059 /* SecondScreenViewController.swift in Sources */,
 				BBCE471924B9746B00B7C52A /* ActivityViewController.swift in Sources */,
+				BB87ED7724E9AE7100B2ED6F /* FinalButtonViewController.swift in Sources */,
 				BBA2C8E624B943F30043C059 /* FoodViewController.swift in Sources */,
 				BBA2C8D224B914DC0043C059 /* HomeViewController.swift in Sources */,
 				BBA2C8CE24B914DC0043C059 /* AppDelegate.swift in Sources */,
 				BBA2C8D024B914DC0043C059 /* SceneDelegate.swift in Sources */,
 				BB9B504F24BBA093003E5909 /* LocationViewController.swift in Sources */,
+				BB73336224F1B0C90010D776 /* EnivornmentEnum.swift in Sources */,
+				BB87ED7924E9B78A00B2ED6F /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +390,7 @@
 		};
 		BBA2C8DF24B914DE0043C059 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7593FB059B85EA2C911DE66F /* Pods-QuickPick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +408,7 @@
 		};
 		BBA2C8E024B914DE0043C059 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E676FC1F8F5916DF9C296C33 /* Pods-QuickPick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

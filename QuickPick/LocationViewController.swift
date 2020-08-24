@@ -16,7 +16,10 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var currentLocationButton: UIButton!
     let locationManager = CLLocationManager()
     @IBOutlet weak var zipCodeButton: UIButton!
-    
+    var latitude = 0.0;
+
+
+     
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +105,10 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     func okHandler(alert: UIAlertAction){
         print(usrTextField?.text as Any)
         self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
+    }
+    
+    public func sendLocation(){
+        
     }
     
 }

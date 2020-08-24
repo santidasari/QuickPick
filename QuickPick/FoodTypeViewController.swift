@@ -66,7 +66,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "any"}
         }
-        print(foodArray)
     }
     
     @IBAction func indianSwitchPressed(_ sender: UISwitch) {
@@ -78,7 +77,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Indian"}
         }
-        print(foodArray)
     }
     
     
@@ -93,7 +91,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Italian"}
         }
-        print(foodArray)
     }
     
     
@@ -108,7 +105,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Asian"}
         }
-        print(foodArray)
     }
     
     
@@ -123,7 +119,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Barbeque"}
         }
-        print(foodArray)
     }
     
     
@@ -138,7 +133,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Burgers"}
         }
-        print(foodArray)
     }
     
     
@@ -153,7 +147,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Diners"}
         }
-        print(foodArray)
     }
     
     
@@ -168,7 +161,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Desserts"}
         }
-        print(foodArray)
     }
     
     
@@ -184,7 +176,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Chinese"}
         }
-        print(foodArray)
     }
     
     
@@ -199,7 +190,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Korean"}
         }
-        print(foodArray)
     }
     
     
@@ -215,7 +205,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Japanese"}
         }
-        print(foodArray)
     }
     
     
@@ -230,7 +219,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Hawaiian"}
         }
-        print(foodArray)
     }
     
     
@@ -245,7 +233,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Mexican"}
         }
-        print(foodArray)
     }
     
     
@@ -260,7 +247,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Pizza"}
         }
-        print(foodArray)
     }
     
     
@@ -276,7 +262,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Thai"}
         }
-        print(foodArray)
     }
     
     
@@ -291,7 +276,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Sushi"}
         }
-        print(foodArray)
     }
     
     
@@ -306,7 +290,6 @@ class FoodTypeViewController: UIViewController {
         else if(sender.isOn == false){
             foodArray.removeAll { $0 == "Vegetarian"}
         }
-        print(foodArray)
     }
     
     
@@ -319,7 +302,7 @@ class FoodTypeViewController: UIViewController {
     
     @IBAction func nextPressed(_ sender: Any) {
         print(foodArray)
-        self.performSegue(withIdentifier: "RandomSegue", sender: self)
+        self.performSegue(withIdentifier: "FinalButtonSegue", sender: self)
     }
     
     
